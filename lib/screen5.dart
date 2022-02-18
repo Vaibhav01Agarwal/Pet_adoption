@@ -24,10 +24,10 @@ class Screen5 extends StatelessWidget {
                        child: Column(    
                      children: [   
                       
-                              SizedBox(height: 80,),
+                              SizedBox(height: 70,),
                               Text('Burmese Cat', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                            
-                       Text('The Burmese cat is a breed of domestic cat, originating in Burma, believed to have its roots near the Thai-Burma border and developed in the United States and Britain.Most modern Burmese are descendants of one female cat called Wong Mau, which was brought from Burma to America in 1930 and bred with American Siamese. From there, American and British breeders developed distinctly different Burmese breed standards, which is unusual among pedigreed domestic cats.'
+                       Text('The Burmese cat is a breed of domestic cat, originating in Burma, believed to have its roots near the Thai-Burma border and developed in the United States and Britain.Most modern Burmese are descendants of one female cat called Wong Mau, which was brought from Burma to America in 1930 and bred with American Siamese.'
                        ,style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600), textAlign:TextAlign.justify,),
                        
                        ],
@@ -69,7 +69,7 @@ class Screen5 extends StatelessWidget {
              alignment: Alignment.topCenter,
              child: Hero(
                  tag: 1,
-               child: Image.asset('lib/images/new4.jpg', width: 280, )),
+               child: Image.asset('lib/images/new4.jpg', width: 220, )),
            ),
          ),
          Align(  
@@ -83,7 +83,7 @@ class Screen5 extends StatelessWidget {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Burmese', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 200,),
+                              SizedBox(width: 180,),
                               Icon(Icons.male, size: 30,),
                             ],
 
@@ -119,7 +119,7 @@ class Screen5 extends StatelessWidget {
            child: Container( 
              
               margin: EdgeInsets.symmetric(horizontal: 10),
-             height: 150,
+             height: 100,
     child: Row(  
       children: [  
         Container( 

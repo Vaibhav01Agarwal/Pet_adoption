@@ -1,12 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+//import 'sign_in.dart';
 import 'drawerScreen.dart';
 import 'homeScreen.dart';
 
-void main() {
-  runApp(MaterialApp(
+Future<void> main() async {
+   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); 
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: HomePage(),));
+    debugShowMaterialGrid: false,
+    
+    home: HomePage(),
+   // theme:ThemeData(fontFamily: 'Circular'),
+    ));
 }
 
 class HomePage extends StatelessWidget {
@@ -15,11 +23,14 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(  
-        children: [  
-          DrawerScreen(),
-          HomeScreen(),
-        ],
+      body: 
+      //SignIn(), 
+      Stack(  
+       children: [ 
+      // SignIn() 
+       DrawerScreen(),
+      HomeScreen(),
+     ],
       ),
       
     );

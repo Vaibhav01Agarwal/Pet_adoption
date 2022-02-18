@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   font_awesome_flutter:
+  firebase_auth:
+  google_sign_in:
+  firebase_core:
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +77,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Circular
+      fonts:
+        - asset: lib/fonts/Bold.ttf
+          weight: 500
+        - asset: lib/fonts/Light.ttf
+        - asset: lib/fonts/SemiBold.ttf
+          weight: 100
   # fonts:
   #   - family: Schyler
   #     fonts:

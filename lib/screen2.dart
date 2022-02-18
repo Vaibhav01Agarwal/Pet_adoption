@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fully_functional_app/Adoption.dart';
 import 'package:fully_functional_app/configuration.dart';
+import 'package:fully_functional_app/payment_ui.dart/merge.dart';
 
 class Screen2 extends StatelessWidget {
   const Screen2({ Key? key }) : super(key: key);
@@ -25,13 +26,14 @@ class Screen2 extends StatelessWidget {
                      children: [   
                       
                               SizedBox(height: 80,),
+                            
                               Text('Persian Cat', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                            
-                       Text('The Persian cat is a long-haired breed of cat characterized by its round face and short muzzle. It is also known as the Persian Longhair in English-speaking countries. The first documented ancestors of Persian cats were imported into Italy from Persia around 1620.Recognized by the cat fancy since the late 19th century, Persian cats were first adopted by the English, and then mainly by American breeders after the Second World War. Some cat fancier organizations breed standards subsume the Himalayan and Exotic Shorthair as.'
+                       Text('The Persian cat is a long-haired breed of cat characterized by its round face and short muzzle. It is also known as the Persian Longhair in English-speaking countries. The first documented ancestors of Persian cats were imported into Italy from Persia around 1620.'
                        ,style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600), textAlign:TextAlign.justify,),
                        
                        ],
-                   )
+                   ),
                  ),
                       color: Colors.lightGreen[100],
                     ),
@@ -39,7 +41,7 @@ class Screen2 extends StatelessWidget {
               ],
             )
             ),
-
+    
             Container(
               margin: EdgeInsets.only(top: 40),
               child: Align(  
@@ -69,7 +71,7 @@ class Screen2 extends StatelessWidget {
              alignment: Alignment.topCenter,
              child: Hero(
                  tag: 1,
-               child: Image.asset('lib/images/new.png', width: 380, )),
+               child: Image.asset('lib/images/new.png', width: 300, )),
            ),
          ),
          Align(  
@@ -83,10 +85,10 @@ class Screen2 extends StatelessWidget {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Persian', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 220,),
+                              SizedBox(width: 200,),
                               Icon(Icons.male, size: 30,),
                             ],
-
+    
                        ),  
                        // SizedBox(width: 5,),
                        Text('Persian Cat', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600), textAlign:TextAlign.start,),
@@ -119,7 +121,7 @@ class Screen2 extends StatelessWidget {
            child: Container( 
              
               margin: EdgeInsets.symmetric(horizontal: 10),
-             height: 150,
+             height: 100,
     child: Row(  
       children: [  
         Container( 
@@ -133,20 +135,25 @@ class Screen2 extends StatelessWidget {
           child: Icon(Icons.favorite_border, color: Colors.white,),
         ),
       SizedBox(width: 10,),
-
+    
       // Box of adoption container
            
        Expanded(
          
-        child: Container(
-          height: 60,
-            decoration: BoxDecoration(
-              color: primaryGreen,
-              borderRadius: BorderRadius.circular(20)
-            ),
+        child: InkWell(
+          child: Container(
+            height: 60,
+              decoration: BoxDecoration(
+                color: primaryGreen,
+                borderRadius: BorderRadius.circular(20)
+              ),
+              
+            child: Center(child: Text('Adoption' , style: TextStyle(color: Colors.white, fontSize: 25),)),
             
-          child: Center(child: Text('Adoption' , style: TextStyle(color: Colors.white, fontSize: 25),)),
-
+          ),
+          onTap: () {   
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage2()));
+          },
         ),
       ),
       
@@ -158,7 +165,7 @@ class Screen2 extends StatelessWidget {
              decoration: BoxDecoration( 
                color: Colors.grey[200],
                borderRadius: BorderRadius.only(topLeft: Radius.circular(20) , topRight:Radius.circular(40), )
-
+    
              ),
            ),
          )

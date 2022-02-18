@@ -24,10 +24,10 @@ class Screen6 extends StatelessWidget {
                        child: Column(    
                      children: [   
                       
-                              SizedBox(height: 80,),
+                              SizedBox(height: 70,),
                               Text('Somali Cat', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                            
-                       Text('The Somali cat is often described as a long-haired African cat. It is believed that they originated from Somalia, a long lost cousin of the Abyssinian cat, which has origins in Ethiopia.The name "Somali" is in reference to the African nation, Somalia. Somalia borders Abyssinia, which is modern day Ethiopia. The name of the breed is a unique interpretation of the Ethiopian-Somali conflict; Mague charitably assumed that since the land borders were a human creation, so are the genetic borders between the Abyssinian cat and the long-haired Abyssinian.'
+                       Text('The Somali cat is often described as a long-haired African cat. It is believed that they originated from Somalia, a long lost cousin of the Abyssinian cat, which has origins in Ethiopia.The name "Somali" is in reference to the African nation, Somalia. Somalia borders Abyssinia, which is modern day Ethiopia.'
                        ,style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600), textAlign:TextAlign.justify,),
                        
                        ],
@@ -69,7 +69,7 @@ class Screen6 extends StatelessWidget {
              alignment: Alignment.topCenter,
              child: Hero(
                  tag: 1,
-               child: Image.asset('lib/images/new6.jpg', width: 380, height: 500, )),
+               child: Image.asset('lib/images/new6.jpg', width: 280,  )),
            ),
          ),
          Align(  
@@ -119,7 +119,7 @@ class Screen6 extends StatelessWidget {
            child: Container( 
              
               margin: EdgeInsets.symmetric(horizontal: 10),
-             height: 150,
+             height: 100,
     child: Row(  
       children: [  
         Container( 

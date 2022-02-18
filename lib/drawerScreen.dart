@@ -1,8 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fully_functional_app/configuration.dart';
 import 'package:fully_functional_app/profile.dart';
 import 'package:fully_functional_app/settings.dart';
-import 'SignIn.dart';
+import 'sign_in.dart';
 
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({ Key? key }) : super(key: key);
@@ -75,7 +76,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
               SizedBox(width: 10,),
               InkWell(  
               child:Text('Log out', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-             onTap: () {  
+             onTap: () async{  
+               await FirebaseAuth.instance.signOut();
                Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
              },
              

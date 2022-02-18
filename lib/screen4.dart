@@ -27,7 +27,7 @@ class Screen4 extends StatelessWidget {
                               SizedBox(height: 80,),
                               Text('Siberian Cat', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                            
-                       Text('The Siberian is a centuries-old landrace (natural variety) of domestic cat in Russia and recently developed as a formal breed with standards promulgated the world over since the late 1980s.Siberians vary from medium to medium-large in size. The formal name of the breed is Siberian Forest Cat, but usually it is simply called the Siberian or Siberian cat.[3] Another formal breed name is the Moscow Semi-Longhair. The cat is an ancient breed that is now believed to be ancestral to all modern long-haired cats.'
+                       Text('The Siberian is a centuries-old landrace (natural variety) of domestic cat in Russia and recently developed as a formal breed with standards promulgated the world over since the late 1980s.Siberians vary from medium to medium-large in size. The formal name of the breed is Siberian Forest Cat, but usually it is simply called the Siberian or Siberian cat.'
                        ,style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600), textAlign:TextAlign.justify,),
                        
                        ],
@@ -69,7 +69,7 @@ class Screen4 extends StatelessWidget {
              alignment: Alignment.topCenter,
              child: Hero(
                  tag: 1,
-               child: Image.asset('lib/images/new3.jpeg', width: 335, )),
+               child: Image.asset('lib/images/new3.jpeg', width: 280, )),
            ),
          ),
          Align(  
@@ -83,7 +83,7 @@ class Screen4 extends StatelessWidget {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Siberian', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 220,),
+                              SizedBox(width: 200,),
                               Icon(Icons.male, size: 30,),
                             ],
 
@@ -119,7 +119,7 @@ class Screen4 extends StatelessWidget {
            child: Container( 
              
               margin: EdgeInsets.symmetric(horizontal: 10),
-             height: 150,
+             height: 100,
     child: Row(  
       children: [  
         Container( 

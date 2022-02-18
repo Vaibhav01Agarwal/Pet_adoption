@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       decoration: BoxDecoration(  
         color: Colors.grey[200],
-        borderRadius: BorderRadius.circular(40)
+       // borderRadius: BorderRadius.circular(10)
       ),
       child: SingleChildScrollView(   
          child: Column(  
@@ -172,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                      children: [  
                        Container(  
                          decoration: BoxDecoration(  
-                           color: Colors.blueGrey[300],
+                           // color: Colors.blueGrey[300],
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: shadowList,
                          ),
@@ -196,8 +196,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Persian', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 40,),
-                              Icon(Icons.male, size: 30,),
+                              SizedBox(width: 20,),
+                              Icon(Icons.male, size: 20,),
                             ],
 
                        ),
@@ -255,7 +255,7 @@ class _HomeScreenState extends State<HomeScreen> {
                      children: [  
                        Container(  
                          decoration: BoxDecoration(  
-                           color: Colors.orange[100],
+                          // color: Colors.orange[100],
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: shadowList,
                          ),
@@ -285,8 +285,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Siamese', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 20,),
-                              Icon(Icons.male, size: 30,),
+                              SizedBox(width: 10,),
+                              Icon(Icons.male, size: 20,),
                             ],
 
                        ),
@@ -343,7 +343,7 @@ class _HomeScreenState extends State<HomeScreen> {
                      children: [  
                        Container(  
                          decoration: BoxDecoration(  
-                           color: Colors.red[100],
+                         //  color: Colors.red[100],
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: shadowList,
                          ),
@@ -371,8 +371,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Siberian', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 20,),
-                              Icon(Icons.male, size: 30,),
+                              SizedBox(width: 10,),
+                              Icon(Icons.male, size: 20,),
                             ],
 
                        ),
@@ -429,7 +429,7 @@ class _HomeScreenState extends State<HomeScreen> {
                      children: [  
                        Container(  
                          decoration: BoxDecoration(  
-                           color: Colors.green[100],
+                         //  color: Colors.green[100],
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: shadowList,
                          ),
@@ -457,8 +457,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Burmese', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 20,),
-                              Icon(Icons.male, size: 30,),
+                              SizedBox(width: 8,),
+                              Icon(Icons.male, size: 20,),
                             ],
 
                        ),
@@ -513,7 +513,7 @@ class _HomeScreenState extends State<HomeScreen> {
                      children: [  
                        Container(  
                          decoration: BoxDecoration(  
-                           color: Colors.blue[100],
+                        //   color: Colors.blue[100],
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: shadowList,
                          ),
@@ -540,8 +540,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Somali', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 40,),
-                              Icon(Icons.male, size: 30,),
+                              SizedBox(width: 30,),
+                              Icon(Icons.male, size: 20,),
                             ],
 
                        ),

@@ -27,7 +27,7 @@ class Screen3 extends StatelessWidget {
                               SizedBox(height: 80,),
                               Text('Siamese Cat', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                            
-                       Text('The Siamese cat is one of the first distinctly recognized breeds of Asian cat. Derived from the Wichianmat landrace, one of several varieties of cat native to Thailand (formerly known as Siam), the original Siamese became one of the most popular breeds in Europe and North America in the 19th century. The carefully refined, more extreme-featured, modern-style Siamese is characterized by blue almond-shaped eyes; a triangular head shape; large ears; an elongated, slender, and muscular body; and various forms of point colouration.'
+                       Text('The Siamese cat is one of the first distinctly recognized breeds of Asian cat. Derived from the Wichianmat landrace, one of several varieties of cat native to Thailand (formerly known as Siam), the original Siamese became one of the most popular breeds in Europe and North America in the 19th century.'
                        ,style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600), textAlign:TextAlign.justify,),
                        
                        ],
@@ -69,7 +69,7 @@ class Screen3 extends StatelessWidget {
              alignment: Alignment.topCenter,
              child: Hero(
                  tag: 1,
-               child: Image.asset('lib/images/new5.png', width: 360,)),
+               child: Image.asset('lib/images/new5.png', width: 300,)),
            ),
          ),
          Align(  
@@ -83,7 +83,7 @@ class Screen3 extends StatelessWidget {
                             children: [  
                                SizedBox(width: 10,),
                               Text('Siamese', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 220,),
+                              SizedBox(width: 180,),
                               Icon(Icons.male, size: 30,),
                             ],
 
@@ -119,7 +119,7 @@ class Screen3 extends StatelessWidget {
            child: Container( 
              
               margin: EdgeInsets.symmetric(horizontal: 10),
-             height: 150,
+             height: 100,
     child: Row(  
       children: [  
         Container( 

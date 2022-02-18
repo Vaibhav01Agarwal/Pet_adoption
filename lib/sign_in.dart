@@ -1,30 +1,40 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+// import 'package:fully_functional_app/drawerScreen.dart';
+import 'package:fully_functional_app/homeScreen.dart';
+import 'package:fully_functional_app/main.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'signUp.dart';
 
 class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
+
   
 
   @override
   _SignInState createState() => _SignInState();
 }
 
+final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+final googlesignIn = GoogleSignIn();
+
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      appBar: AppBar(title:Text('Pet Adoption'),
+      appBar: AppBar(title: const Text('Pet Adoption'),
       backgroundColor: Colors.grey,),
       body: SingleChildScrollView(
         child: Container(  
         alignment: Alignment.bottomCenter,
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(  
             mainAxisSize: MainAxisSize.min,
             children: [  
-      
-              TextField(  
+             const TextField(  
                 decoration: InputDecoration(
                  
                   labelText: 'email' ,
@@ -32,7 +42,7 @@ class _SignInState extends State<SignIn> {
                   )
               ),  
       
-               TextField(  
+               const TextField(  
                  decoration: InputDecoration(
                  
                   labelText: 'Password' ,
@@ -40,19 +50,20 @@ class _SignInState extends State<SignIn> {
                   )
               
               ),
-               SizedBox(height: 10,),
+               const SizedBox(height: 10,),
                Container(  
                  alignment: Alignment.centerRight,
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                 child: Text("Forget Password" , 
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                 child: const Text("Forget Password" , 
                  //style: simpleTextStyle()
                   )
                ),
-               SizedBox(height: 10,),
-               Container(
+               const SizedBox(height: 10,),
+                
+                Container(
                  alignment: Alignment.center,
                  width: MediaQuery.of(context).size.width,
-                 padding: EdgeInsets.symmetric(vertical:20),
+                 padding: const EdgeInsets.symmetric(vertical:20),
                   decoration:   BoxDecoration  (   
                     color: Colors.grey,
 
@@ -68,15 +79,19 @@ class _SignInState extends State<SignIn> {
 
                     borderRadius: BorderRadius.circular(30)
                   ), 
-                 child: Text("SignIn" , 
+                  
+                 child: const Text("SignIn" , 
                  style: TextStyle(  
                   color: Colors.white,
                   fontSize: 20
                 ),
-                 )
-               ),
+                 ),
+                
+                  ),
+                  
                SizedBox(height: 18,),
-                Container(
+             InkWell(
+               child:  Container(
                  alignment: Alignment.center,
                  width: MediaQuery.of(context).size.width,
                  padding: EdgeInsets.symmetric(vertical:20),
@@ -85,25 +100,35 @@ class _SignInState extends State<SignIn> {
                     color:  Colors.grey[350],
                     borderRadius: BorderRadius.circular(30)
                   ), 
-                 child: Text("Sign In with Google" , 
+               
+                 child:const Text("Sign In with Google" , 
                  style: TextStyle(  
                   color: Colors.black87,
                   fontSize: 20
                 ),
-                 )
+                 ),
+                
+                
+                 ),
+                 onTap: (){
+                   _signInWithGoogle();
+                  //  signInWithGoogle();
+                  //  var user = signInWithGoogle();
+                  //  print(user);
+                 },
                ),
                SizedBox(height: 18,),
               
               Row(   
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [  
-                  Text("Don't have account?" , style: TextStyle(  
+                  const Text("Don't have account?" , style: TextStyle(  
                   color: Colors.black,
                   fontSize: 17,
                //style: mediumTextStyle(),
                    ) ),
                    InkWell(  
-                child:  Text("Register now" , style: TextStyle(  
+                child:  const Text("Register now" , style: TextStyle(  
                   color: Colors.black,
                   fontSize: 17,
                   decoration: TextDecoration.underline
@@ -121,4 +146,29 @@ class _SignInState extends State<SignIn> {
       );
       
   }
+
+  _signInWithGoogle() async { 
+    if(googlesignIn.isSignedIn() == true){
+print("already account");
+    }
+    else{
+      print("not ac");
+    }
+     
+    final GoogleSignInAccount? googleUser = await googlesignIn.signIn();
+
+    googlesignIn.signIn().catchError((error)=>print(error));
+  
+    final GoogleSignInAuthentication googleAuth = await googleUser!.authentication;
+    
+      
+    final AuthCredential credential = GoogleAuthProvider.credential(  
+      idToken: googleAuth.idToken , accessToken: googleAuth.accessToken);
+
+    final user = (await firebaseAuth.signInWithCredential(credential)).user;
+    print(user?.email.toString());
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePage()));
+    
+  }
+  
 }
