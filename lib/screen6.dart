@@ -80,6 +80,7 @@ class Screen6 extends StatelessWidget {
                    child: Column(    
                      children: [   
                        Row(   
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [  
                                SizedBox(width: 10,),
                               Text('Somali', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
@@ -92,11 +93,13 @@ class Screen6 extends StatelessWidget {
                        Text('Somali Cat', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600), textAlign:TextAlign.start,),
                        Text('3 years old', style: TextStyle(fontSize: 20)),
                        Row(  
+                         mainAxisAlignment: MainAxisAlignment.start,
                      
                          children: [
                             SizedBox(width: 5,),
                           Icon(Icons.add_location_alt),
-                           SizedBox(width: 20,),
+                          // SizedBox(width: 20,),
+                         
                           Text('Distance:8.0 km', style: TextStyle(fontSize: 14))
                          ]
                        )

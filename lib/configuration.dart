@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+
 Color primaryGreen = Color(0xff416d6d);
 List<BoxShadow> shadowList = [    
- //BoxShadow(color: Colors.grey[300], blurRadius: 30, offset: Offset(0, 10))
+// BoxShadow(color: Colors.grey[300], blurRadius: 30, offset: Offset(0, 10))
 ];
 
-List<Map> categories = [  
-  {'name' : 'Cats' , 'iconpath' : 'lib/images/cat.png'},
-  {'name' : 'Dogs' , 'iconpath' :  'lib/images/dog.png'},
-  {'name' : 'Bunnies' , 'iconpath' : 'lib/images/easter-bunny.png'},
-  {'name' : 'Parrots' , 'iconpath' : 'lib/images/parrot.png'},
-  {'name' : 'Horses' , 'iconpath' : 'lib/images/horse.png'},
+class ItemModel {
+ // class constructor
+ ItemModel(this.id, this.image, this.name,);
+ // class fields
+ final int id;
+ final String image;
+ final String name;
+}
+
+List<ItemModel> categories = [ 
+  ItemModel(1, "lib/images/cat.png", 'Cats'),
+  ItemModel(2, "lib/images/dog.png", 'Dogs'),
+  ItemModel(3, "lib/images/easter-bunny.png", 'Bunnies'),
+  ItemModel(4, "lib/images/parrot.png", 'Parrots'),
+  ItemModel(5, "lib/images/horse.png", 'Horses'),
 ];
 
 List<Map> drawerItems=[  

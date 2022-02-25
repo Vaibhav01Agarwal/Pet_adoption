@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fully_functional_app/main.dart';
-import 'carddetails.dart';
+
+import '../CallHomeScreen.dart';
+
 import 'data.dart';
 
 import 'cardsection.dart';
@@ -28,13 +29,17 @@ class HomePage2 extends StatelessWidget {
                       
                   child: ElevatedButton(  
                     
-                    child: Text('back to home screen'),
+                    child: const Text('back to home screen', style: TextStyle(  
+                      fontSize: 20, 
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),),
                     
                     onPressed: () {  
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>HomePage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  CallHomeScreen()));
                     },
                     style: ButtonStyle(  
-                      backgroundColor: MaterialStateProperty.all(Color(0xFFCADCED)),
+                      backgroundColor: MaterialStateProperty.all(const Color(0xFFCADCED)),
                     ),
                   ),
                 )

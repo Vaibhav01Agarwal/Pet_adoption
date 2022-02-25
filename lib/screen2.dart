@@ -82,6 +82,7 @@ class Screen2 extends StatelessWidget {
                    child: Column(    
                      children: [   
                        Row(   
+                         mainAxisAlignment: MainAxisAlignment.center,
                             children: [  
                                SizedBox(width: 10,),
                               Text('Persian', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
@@ -94,11 +95,12 @@ class Screen2 extends StatelessWidget {
                        Text('Persian Cat', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600), textAlign:TextAlign.start,),
                        Text('2 years old', style: TextStyle(fontSize: 20)),
                        Row(  
-                     
+                     mainAxisAlignment: MainAxisAlignment.start,
                          children: [
+                           
                             SizedBox(width: 5,),
                           Icon(Icons.add_location_alt),
-                           SizedBox(width: 20,),
+                        //   SizedBox(width: 20,),
                           Text('Distance:2.0 km', style: TextStyle(fontSize: 14))
                          ]
                        )

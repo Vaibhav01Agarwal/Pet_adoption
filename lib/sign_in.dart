@@ -4,7 +4,9 @@ import 'package:flutter/widgets.dart';
 // import 'package:fully_functional_app/drawerScreen.dart';
 import 'package:fully_functional_app/homeScreen.dart';
 import 'package:fully_functional_app/main.dart';
+// import 'package:fully_functional_app/stack_drawer_home.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'CallHomeScreen.dart';
 import 'signUp.dart';
 
 class SignIn extends StatefulWidget {
@@ -117,6 +119,10 @@ class _SignInState extends State<SignIn> {
                   //  print(user);
                  },
                ),
+
+               // Github Authantication button  
+                 
+              
                SizedBox(height: 18,),
               
               Row(   
@@ -167,7 +173,7 @@ print("already account");
 
     final user = (await firebaseAuth.signInWithCredential(credential)).user;
     print(user?.email.toString());
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> CallHomeScreen()));
     
   }
   

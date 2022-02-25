@@ -28,7 +28,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               InkWell(   
                 
              child: CircleAvatar(
-                backgroundImage: AssetImage('lib/images/new.png'),
+                backgroundImage: AssetImage('lib/images/my_image.jpg'),
                 
               ),
               onTap: () {  
@@ -39,7 +39,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               Column(   
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [  
-                  Text('Miroslava', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                  Text('Bill Vaibhav', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                   Text('Active Status', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold ))
               
                 ],

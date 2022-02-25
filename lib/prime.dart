@@ -7,12 +7,12 @@ class PrimeMembership extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[350],
-      appBar: AppBar(title: Text('Prime Membership'),
+      appBar: AppBar(title: const Text('Prime Membership'),
       backgroundColor: Colors.grey
       ),
       body: Container(  
         child: Center(  
-          child:Text('Thankyou For Purchaging Prime Membership',
+          child:const Text('Thankyou For Purchaging Prime Membership',
           style: TextStyle(fontSize:16 , fontWeight: FontWeight.bold) ) ,
           
         ),

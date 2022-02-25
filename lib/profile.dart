@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fully_functional_app/configuration.dart';
-import 'package:fully_functional_app/homeScreen.dart';
 import 'package:fully_functional_app/prime.dart'; 
 class Profile extends StatelessWidget {
   const Profile({ Key? key }) : super(key: key);
@@ -9,7 +7,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(title: Text('User Profile'),
+      appBar: AppBar(title: const Text('User Profile'),
       backgroundColor: Colors.grey,
       ),
       
@@ -22,9 +20,9 @@ class Profile extends StatelessWidget {
                 SizedBox(height: 20,),
                 Row(     
                   children: [   
-                    SizedBox(width: 20,),  
+                   SizedBox(width: 20,),  
                 CircleAvatar(
-                    backgroundImage: AssetImage('lib/images/new.png'),
+                    backgroundImage: AssetImage('lib/images/my_image.jpg'),
                     backgroundColor: Colors.red,
                     maxRadius: 100,
                     ),
@@ -32,10 +30,10 @@ class Profile extends StatelessWidget {
                       children: [  
                     SizedBox(width: 50),
 
-                  Text('User', style: TextStyle(fontSize: 40),),
+                  Text('Bill', style: TextStyle(fontSize: 40),),
                   SizedBox(height : 10,),
                 
-                  Text('abcdef@gmail.com',),
+                  Text('bill.rubico@gmail.com',),
                   SizedBox(height: 10,),
                   Text('8584868281'),
 
@@ -56,7 +54,7 @@ class Profile extends StatelessWidget {
                 SizedBox(height: 40,),
                 Text('About', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 SizedBox(height: 20,),
-                Text('Unlike their youthful counterparts, senior pets tend to have better manners, cutting down the amount of time and energy training takes. Most are housebroken and know basic commands. In case you are wondering, you can definitely teach old dogs new tricks.Less Mischief, More Calm. It is no secret puppies and kittens like to play with everything! Unless you are careful your new pair of shoes or your potted plants can become their new play-thing.'
+                Text('Hello I am Bill, I did MCA from GL Bajaj , greater Noida. I am a Mobile Developer love to build the application for mobiles.I love to do play with animals. I enjoyed the company of animals very much. They are sweet and very loveable.    '
                   ,style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, ), textAlign: TextAlign.justify,)          
               ],
             ),

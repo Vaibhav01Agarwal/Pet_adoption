@@ -36,12 +36,15 @@ class MySearchDelegate extends SearchDelegate {
 
      
    @override  
-  Widget buildResult (BuildContext context) =>Center(   
-    child: Text(  
-      query,
-      style: TextStyle(fontSize:64  , fontWeight: FontWeight.bold),
+  Widget buildResult (BuildContext context)  {   
+  return Center(   
+    child: Text(query,
+    style: TextStyle(fontSize:64  , fontWeight: FontWeight.bold),
     ),
   );
+}
+
+
 
    @override  
   Widget buildSuggestions (BuildContext context)  {   
@@ -53,20 +56,23 @@ class MySearchDelegate extends SearchDelegate {
             
             return result.contains(input); 
     }).toList();    
-      
 
-    return ListView.builder  (  
+    return suggestions.isEmpty? const Text('No Result Found.....',   
+     style: TextStyle(fontSize:20  , 
+     fontWeight: FontWeight.bold),
+     ) :ListView.builder  (  
       itemCount: suggestions.length,
       itemBuilder: (context , index) {  
         final suggestion = suggestions[index];
 
-         return ListTile  (  
+         return ListTile  ( 
+          
            title: Text(suggestion),
            onTap: () {
                 query = suggestion;
-                showResults(context); 
+               buildResult(context); 
            },
-         );
+        );
       },
     );
   }

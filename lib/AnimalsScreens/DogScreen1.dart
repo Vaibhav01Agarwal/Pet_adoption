@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fully_functional_app/configuration.dart';
+import 'package:fully_functional_app/configuration.dart';  
+import 'package:fully_functional_app/payment_ui.dart/merge.dart';
 
-// for Burmese cat
-class Screen5 extends StatelessWidget {
-  const Screen5({ Key? key }) : super(key: key);
 
+class DogScreen1 extends StatelessWidget {
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -24,14 +24,15 @@ class Screen5 extends StatelessWidget {
                        child: Column(    
                      children: [   
                       
-                              SizedBox(height: 70,),
-                              Text('Burmese Cat', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                              SizedBox(height: 80,),
+                            
+                              Text('Labrador Dog', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                            
-                       Text('The Burmese cat is a breed of domestic cat, originating in Burma, believed to have its roots near the Thai-Burma border and developed in the United States and Britain.Most modern Burmese are descendants of one female cat called Wong Mau, which was brought from Burma to America in 1930 and bred with American Siamese.'
+                       Text('The Labrador Retriever or Labrador is a British breed of retriever gun dog. It was developed in the United Kingdom from fishing dogs imported from the colony of Newfoundland (now a province of Canada), and was named after the Labrador region of that colony.'
                        ,style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600), textAlign:TextAlign.justify,),
                        
                        ],
-                   )
+                   ),
                  ),
                       color: Colors.lightGreen[100],
                     ),
@@ -39,7 +40,7 @@ class Screen5 extends StatelessWidget {
               ],
             )
             ),
-
+    
             Container(
               margin: EdgeInsets.only(top: 40),
               child: Align(  
@@ -69,7 +70,7 @@ class Screen5 extends StatelessWidget {
              alignment: Alignment.topCenter,
              child: Hero(
                  tag: 1,
-               child: Image.asset('lib/images/new4.jpg', width: 220, )),
+               child: Image.asset('lib/images/dog3.jpg', width: 200, )),
            ),
          ),
          Align(  
@@ -80,26 +81,26 @@ class Screen5 extends StatelessWidget {
                    child: Column(    
                      children: [   
                        Row(   
-                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         mainAxisAlignment: MainAxisAlignment.center,
                             children: [  
                                SizedBox(width: 10,),
-                              Text('Burmese', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 180,),
+                              Text('Labrador', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                              SizedBox(width: 150,),
                               Icon(Icons.male, size: 30,),
                             ],
-
+    
                        ),  
                        // SizedBox(width: 5,),
-                       Text('Burmese Cat', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600), textAlign:TextAlign.start,),
-                       Text('1 years old', style: TextStyle(fontSize: 20)),
+                       Text('Labrador Dog', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600), textAlign:TextAlign.start,),
+                       Text('4 years old', style: TextStyle(fontSize: 20)),
                        Row(  
-                         mainAxisAlignment: MainAxisAlignment.start,
-                     
+                     mainAxisAlignment: MainAxisAlignment.start,
                          children: [
+                           
                             SizedBox(width: 5,),
                           Icon(Icons.add_location_alt),
-                           // SizedBox(width: 20,),
-                          Text('Distance:2.0 km', style: TextStyle(fontSize: 14))
+                        //   SizedBox(width: 20,),
+                          Text('Distance:10.0 km', style: TextStyle(fontSize: 14))
                          ]
                        )
                      ],
@@ -135,19 +136,29 @@ class Screen5 extends StatelessWidget {
           child: Icon(Icons.favorite_border, color: Colors.white,),
         ),
       SizedBox(width: 10,),
-
+    
       // Box of adoption container
-      Expanded(
-        child: Container(
-          height: 60,
-            decoration: BoxDecoration(
-              color: primaryGreen,
-              borderRadius: BorderRadius.circular(20)
-            ),
-          child: Center(child: Text('Adoption' , style: TextStyle(color: Colors.white, fontSize: 25),)),
-
+           
+       Expanded(
+         
+        child: InkWell(
+          child: Container(
+            height: 60,
+              decoration: BoxDecoration(
+                color: primaryGreen,
+                borderRadius: BorderRadius.circular(20)
+              ),
+              
+            child: Center(child: Text('Adoption' , style: TextStyle(color: Colors.white, fontSize: 25),)),
+            
+          ),
+          onTap: () {   
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage2()));
+          },
         ),
-      )
+      ),
+      
+      
       ],
     ),
              
@@ -155,7 +166,7 @@ class Screen5 extends StatelessWidget {
              decoration: BoxDecoration( 
                color: Colors.grey[200],
                borderRadius: BorderRadius.only(topLeft: Radius.circular(20) , topRight:Radius.circular(40), )
-
+    
              ),
            ),
          )
